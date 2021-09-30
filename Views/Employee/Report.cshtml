@@ -1,0 +1,35 @@
+@model IEnumerable<myExamination.Models.Employee>    
+       
+@{    
+        ViewData["Title"] = "Index";    
+    }    
+<h2>Index</h2>    
+<p>    
+    <a asp-action="Index">Back to Index</a>    
+</p>    
+<table class="table">    
+    <thead>    
+        <tr>    
+            <th>    
+                Department Name    
+            </th>
+            <th>    
+                No. of Employees    
+            </th>
+            <th>      
+        </tr>    
+    </thead>    
+    <tbody>    
+        @foreach (var item in Model)    
+{    
+            <tr>    
+                <td>    
+                    @Html.DisplayFor(model=>item.Department)    
+                </td>    
+                <td>    
+                    @Html.DisplayFor(model => item.ID)    
+                </td>    
+            </tr>    
+        }    
+    </tbody>    
+</table>    
