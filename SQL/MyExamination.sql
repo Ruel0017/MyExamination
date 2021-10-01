@@ -76,7 +76,7 @@ End
 Create procedure spReportList      
 as      
 Begin      
-    select Count(EmployeeNo), department      
+    select Count(EmployeeNo) AS Employee , department AS Department
     from tblEmployee
 	group by department
 End  
